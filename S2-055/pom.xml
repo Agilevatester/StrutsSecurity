@@ -29,7 +29,7 @@
         <version>2.5</version>
     </parent>
 
-    <artifactId>struts2-rest-showcase</artifactId>
+    <artifactId>s2-055</artifactId>
     <packaging>war</packaging>
     <version>2.5</version>
     <name>Struts 2 Rest Showcase Webapp</name>
@@ -102,7 +102,7 @@
     </dependencies>
 
     <build>
-        <finalName>struts2-rest-showcase</finalName>
+        <finalName>s2-055</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -110,6 +110,11 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
@@ -127,7 +132,7 @@
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
                     <webAppConfig>
-                        <contextPath>/struts2-rest-showcase</contextPath>
+                        <contextPath>/s2-055</contextPath>
                         <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
                     </webAppConfig>
                 </configuration>
