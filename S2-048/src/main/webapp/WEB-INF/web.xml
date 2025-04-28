@@ -1,0 +1,31 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+    <display-name>S2-048 Vulnerable Application</display-name>
+
+    <!-- Removed context-param for struts-config.xml as struts.xml is now used -->
+    <!-- Updated configuration to rely on default struts.xml -->
+
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>ListActionsServlet</servlet-name>
+        <servlet-class>com.example.ListActionsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListActionsServlet</servlet-name>
+        <url-pattern>/listActions</url-pattern>
+    </servlet-mapping>
+</web-app>

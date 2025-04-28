@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>parent-struts-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>S2-001</module>
+        <module>S2-003</module>
+        <module>S2-007</module>
+        <module>S2-008</module>
+        <module>S2-009</module>
+        <module>S2-012</module>
+        <module>S2-013</module>
+        <module>S2-015</module>
+        <module>S2-016</module>
+        <module>S2-019</module>
+        <module>S2-029</module>
+        <module>S2-037</module>
+        <module>S2-045</module>
+        <module>S2-046</module>
+        <module>S2-047</module>
+        <module>S2-048</module>
+        <module>S2-052</module>
+        <module>S2-053</module>
+        <module>S2-055</module>
+        <module>S2-057</module>
+        <module>S2-066</module>
+    </modules>
+</project>

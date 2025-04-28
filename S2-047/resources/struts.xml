@@ -1,0 +1,12 @@
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="fileUpload" class="com.example.FileUploadAction">
+            <result name="success">/dashboard.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="validateURL" class="com.example.URLValidationAction">
+            <result name="success">/urlValidationSuccess.jsp</result>
+            <result name="error">/urlValidationError.jsp</result>
+        </action>
+    </package>
+</struts>

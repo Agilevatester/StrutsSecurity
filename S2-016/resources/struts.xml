@@ -1,0 +1,56 @@
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+        <!-- Login Action -->
+        <action name="login" class="com.demo.action.LoginAction">
+            <result name="success">/dashboard.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+
+        <!-- Dashboard Action -->
+        <action name="dashboard" class="com.demo.action.DashboardAction">
+            <result>/dashboard.jsp</result>
+        </action>
+
+        <!-- User Info Action -->
+        <action name="userInfo" class="com.demo.action.UserInfoAction">
+            <result>/userInfo.jsp</result>
+        </action>
+
+        <!-- Search Users Action -->
+        <action name="searchUsers" class="com.demo.action.SearchUsersAction">
+            <result>/searchUsers.jsp</result>
+        </action>
+
+        <action name="vulnerableAction" class="com.demo.action.VulnerableAction">
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <!-- Vulnerable ActionMapper Configuration -->
+        <action name="*" class="com.demo.action.PageAction">
+            <result>/example/{1}.jsp</result>
+        </action>
+
+        <action name="redirectExample" class="com.demo.action.RedirectExampleAction">
+            <result name="success" type="redirect">/example/{1}.jsp</result>
+        </action>
+
+        <action name="commandExecution" class="com.demo.action.CommandExecutionAction">
+            <result name="success" type="redirectAction">/example/{1}.jsp</result>
+        </action>
+
+        <action name="*" class="com.demo.action.PageAction">
+            <result>/{1}.jsp</result>
+        </action>
+        
+        <action name="param" class="com.demo.action.ParamAction">
+            <result name="error">${message}</result>
+        
+            <result name="success" type="httpheader">
+            <param name="error">305</param>
+                <param name="headers.fxxk">${message}</param>
+            </result>
+        </action>
+    </package>
+</struts>

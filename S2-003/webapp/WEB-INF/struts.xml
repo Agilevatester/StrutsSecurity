@@ -1,0 +1,17 @@
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="vulnerable" class="com.demo.action.VulnerableAction">
+            <result>/result.jsp</result>
+        </action>
+    </package>
+        <!-- Add packages here -->
+	<package name="default" extends="struts-default">
+		<action name="login" class="com.demo.action.LoginAction">
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+	</package>
+</struts>

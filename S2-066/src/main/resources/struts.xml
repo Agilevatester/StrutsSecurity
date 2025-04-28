@@ -1,0 +1,13 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="singleFileUpload" class="com.example.actions.SingleFileUploadAction">
+            <result name="success">/singleFileUpload.jsp</result>
+        </action>
+        <action name="multipleFileUpload" class="com.example.actions.MultipleFileUploadAction">
+            <result name="success">/multipleFileUpload.jsp</result>
+        </action>
+    </package>
+</struts>

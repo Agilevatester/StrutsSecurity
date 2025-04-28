@@ -1,0 +1,43 @@
+<project name="S3-003_005" default="deploy" basedir=".">
+    <!-- Define properties -->
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+    <property name="dist.dir" value="dist" />
+    <property name="webapp.dir" value="webapp" />
+    <property name="webinf.dir" value="${webapp.dir}/WEB-INF" />
+    <property name="classes.dir" value="${webinf.dir}/classes" />
+    <property name="lib.dir" value="${webinf.dir}/lib" />
+
+    <!-- Clean task -->
+    <target name="clean" description="Clean up build and dist directories">
+        <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
+        <delete dir="${classes.dir}" />
+    </target>
+
+    <!-- Compile Java classes -->
+    <target name="compile" depends="clean" description="Compile Java source files">
+        <mkdir dir="${classes.dir}" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}" includes="**/*.jar" />
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Package the WAR file -->
+    <target name="package" depends="compile" description="Package the application into a WAR file">
+        <mkdir dir="${dist.dir}" />
+        <war destfile="${dist.dir}/StrutsWebApp-S2-003-005.war" webxml="${webinf.dir}/web.xml">
+            <fileset dir="${webapp.dir}" excludes="WEB-INF/**" />
+            <fileset dir="${webinf.dir}" />
+            <classes dir="${classes.dir}" />
+        </war>
+    </target>
+
+    <!-- Deploy task -->
+    <target name="deploy" depends="package" description="Deploy the WAR file">
+        <echo message="Deploying WAR file to the server..." />
+        <!-- Add deployment logic here, e.g., copy to a server directory -->
+    </target>
+</project>

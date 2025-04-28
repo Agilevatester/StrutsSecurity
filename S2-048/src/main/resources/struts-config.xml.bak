@@ -1,0 +1,15 @@
+<!-- Backup of struts-config.xml -->
+<struts-config>
+    <form-beans>
+        <form-bean name="vulnerableForm" type="org.apache.struts.action.DynaActionForm" />
+    </form-beans>
+    <action-mappings>
+        <action path="/vulnerableAction" 
+                type="com.example.actions.VulnerableAction" 
+                name="vulnerableForm" 
+                scope="request" 
+                validate="false">
+            <forward name="success" path="/result.jsp" />
+        </action>
+    </action-mappings>
+</struts-config>
