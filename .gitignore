@@ -1,5 +1,6 @@
 # Ignore all target folders and their subfolders
 **/target/
-
+**/dist/
+.vscode/
 # Ignore all folders under classes
 **/classes/
