@@ -16,7 +16,7 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <version>9.0.73</version>
+            <version>9.0.104</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -43,7 +43,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <ant antfile="build.xml" target="package" />
+                                <ant antfile="build.xml" target="package"/>
                             </target>
                         </configuration>
                         <goals>
@@ -55,7 +55,7 @@
                         <phase>compile</phase>
                         <configuration>
                             <target>
-                                <ant antfile="build.xml" target="compile" />
+                                <ant antfile="build.xml" target="compile"/>
                             </target>
                         </configuration>
                         <goals>
@@ -67,7 +67,7 @@
                         <phase>clean</phase>
                         <configuration>
                             <target>
-                                <ant antfile="build.xml" target="clean" />
+                                <ant antfile="build.xml" target="clean"/>
                             </target>
                         </configuration>
                         <goals>
